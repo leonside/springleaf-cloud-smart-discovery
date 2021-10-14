@@ -31,7 +31,7 @@
 
 ### Github示例工程
 
-​     如果希望最快的速度了解Smart Discovery的功能，您可以直接下载[Github上的示例工程]()并运行，结合配置规则来快速了解Smart Discovery。
+​     如果希望最快的速度了解Smart Discovery的功能，您可以直接下载[Github上的示例工程](https://github.com/leonside/springleaf-cloud-smart-discovery/tree/master/springleaf-cloud-smart-discovery-samples)并运行，结合配置规则来快速了解Smart Discovery。
 
 
 
@@ -112,8 +112,7 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
- 	  配置更多的服务元数据，smart discovery基于此元数据进行路由（此示例中基于version路由）
-        metadata:
+        metadata:  #配置更多的服务元数据，smart discovery基于此元数据进行路由（此示例中基于version路由）
           version: 1.0
  #         region: dev
  #         tag: tag1
