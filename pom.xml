@@ -32,6 +32,28 @@
         <spring.boot.version>2.1.5.RELEASE</spring.boot.version>
     </properties>
 
+    <scm>
+        <connection>scm:git:https://github.com/leonside/springleaf-cloud-smart-discovery.git</connection>
+        <url>scm:https://github.com/leonside/springleaf-cloud-smart-discovery.git</url>
+        <developerConnection>scm:https://github.com/leonside/springleaf-cloud-smart-discovery.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>leon</id>
+            <name>leon</name>
+            <email>408970922@qq.com</email>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
     <dependencyManagement>
         <dependencies>
 
