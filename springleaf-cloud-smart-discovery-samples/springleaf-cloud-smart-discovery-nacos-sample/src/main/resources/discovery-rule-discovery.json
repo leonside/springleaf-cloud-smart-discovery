@@ -1,0 +1,17 @@
+[
+  {
+    "serviceId": "demo-a",
+    "force": true,
+    "priority": 0,
+    "conditions": "version = 1.0 => version = 1.* ",
+    "enabled": true
+  },
+  {
+    "serviceId": "demo-a",
+    "force": true,
+    "priority": 0,
+    "conditions": "tag='' => *",
+    "enabled": false,
+    "description": "Sorted by priority, global configuration has the lowest priority."
+  }
+]

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springleaf-cloud-smart-discovery-samples</artifactId>
+        <groupId>io.github.leonside</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>springleaf-cloud-smart-discovery-nacos-sample</artifactId>
+
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.leonside</groupId>
+            <artifactId>springleaf-cloud-smart-discovery-nacos</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client</artifactId>
+            <version>1.2.0</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>duceap-releases</id>
+            <name>Team Nexus Release Repository</name>
+            <url>http://192.168.6.13:8081/nexus/content/groups/public</url>
+            <releases><enabled>true</enabled><updatePolicy>always</updatePolicy></releases>
+            <snapshots><enabled>true</enabled><updatePolicy>always</updatePolicy></snapshots>
+        </repository>
+    </repositories>
+</project>

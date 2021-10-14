@@ -1,0 +1,13 @@
+[
+  {
+    "serviceId": "demo-b",
+    "type": "version",
+    "conditions": "application=demo-a",
+    "weightMap": {
+      "1.0": 1,
+      "2.0": 99
+    },
+    "priority": 0,
+    "description": "Only the first weight configuration takes effect"
+  }
+]

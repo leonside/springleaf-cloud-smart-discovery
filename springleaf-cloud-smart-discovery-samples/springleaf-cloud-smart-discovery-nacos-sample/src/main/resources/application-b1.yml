@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: demo-b
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        metadata:
+          group: groupA
+          version: 1.0
+          region: dev
+          tag: tagA
+          weight: 20
+  main:
+    allow-bean-definition-overriding: true
+server:
+  port: 28080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+ribbon:
+  ReadTimeout: 30000 #单位毫秒
+  ConnectTimeout: 30000 #单位毫秒

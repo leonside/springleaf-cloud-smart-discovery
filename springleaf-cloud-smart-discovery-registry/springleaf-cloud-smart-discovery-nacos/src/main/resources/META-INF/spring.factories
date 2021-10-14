@@ -1,0 +1,5 @@
+org.springframework.context.ApplicationContextInitializer=\
+com.springleaf.cloud.discovery.nacos.NacosApplicationContextInitializer
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.springleaf.cloud.discovery.nacos.configuration.DiscoveryRibbonNacosAutoConfiguration

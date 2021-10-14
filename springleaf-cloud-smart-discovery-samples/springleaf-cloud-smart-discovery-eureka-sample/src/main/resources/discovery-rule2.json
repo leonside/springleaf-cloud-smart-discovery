@@ -1,0 +1,10 @@
+{
+  "weights": [
+    {
+      "serviceId": "demo-b",
+      "conditions": "application=demo-a",
+      "priority": 0,
+      "description": "Only the first weight configuration takes effect"
+    }
+  ]
+}

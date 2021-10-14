@@ -1,0 +1,5 @@
+org.springframework.context.ApplicationContextInitializer=\
+com.springleaf.cloud.discovery.consul.ConsulApplicationContextInitializer
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.springleaf.cloud.discovery.consul.configuration.DiscoveryRibbonConsulAutoConfiguration

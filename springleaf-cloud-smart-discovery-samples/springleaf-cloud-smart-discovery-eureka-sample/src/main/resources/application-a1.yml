@@ -1,0 +1,65 @@
+eureka:
+  instance:
+    preferIpAddress: true
+    metadataMap:
+      group: groupA
+      version: 1.0
+      region: dev
+      tag:
+      weight: 20
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: demo-a
+  main:
+    allow-bean-definition-overriding: true
+
+springleaf:
+  smart:
+    discovery:
+      enabled: true
+      group:
+        isolation:
+          enabled: true
+        key: group
+
+      config:
+        file:
+          file: classpath:discovery-rule2.json
+#        env:
+#          value: '[{"serviceId": "demo-a","conditions": "host=* & application =^[0-9a-zA-Z-]*$","priority":1},{"conditions": "host!=10.0.* & application =^[0-9a-zA-Z-]*$"}]'
+#        nacos:
+#          server-addr: localhost:8848
+#          dataId: discovery-all
+#          groupId: DEFAULT_GROUP
+#       apollo:
+#        namespaceName: application
+#        ruleKey: discovery
+
+
+
+server:
+  port: 18080
+#  servlet:
+#    context-path: /demoa
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+ribbon:
+  ReadTimeout: 30000 #单位毫秒
+  ConnectTimeout: 30000 #单位毫秒
+
+
+logging:
+  level:
+    com:
+      springleaf: debug

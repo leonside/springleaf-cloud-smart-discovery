@@ -1,0 +1,198 @@
+{
+  "properties": [
+    {
+      "name": "springleaf.smart.discovery.config.nacos.groupId",
+      "type": "java.lang.String",
+      "description": "[required] uniform configuration nacos groupId."
+    },
+    {
+      "name": "springleaf.smart.discovery.config.nacos.dataId",
+      "type": "java.lang.String",
+      "description": "[not required] uniform configuration nacos dataId,defualt value is DEFAULT_GROUP."
+    },
+    {
+      "name": "springleaf.smart.discovery.config.file.file",
+      "type": "java.lang.String",
+      "description": "[required] uniform configuration file file-path，for example:classpath:discovery-rule.json."
+    },
+    {
+      "name": "springleaf.smart.discovery.config.env.value",
+      "type": "java.lang.String",
+      "description": "[required] uniform Configure value directly from the Spring environment variable， for example: [{\"serviceId\": \"demo-a\",\"conditions\": \"host=*\" }]."
+    },
+    {
+      "name": "springleaf.smart.discovery.config.apollo.namespaceName",
+      "type": "java.lang.String",
+      "description": "[not required] uniform configuration apollo namespaceName, default value is application."
+    },
+    {
+      "name": "springleaf.smart.discovery.config.apollo.ruleKey",
+      "type": "java.lang.String",
+      "description": "[required] uniform configuration apollo ruleKey."
+    },
+    {
+      "name": "springleaf.smart.discovery.discovery.config.nacos.server-addr",
+      "type": "java.lang.String",
+      "description": "[not required] configuration nacos server-addr,read spring.cloud.nacos.discovery.server-addr value if it is not configured."
+    },
+    {
+      "name": "springleaf.smart.discovery.discovery.enabled",
+      "type": "java.lang.String",
+      "description": "[not required] enabled discovery function, default value is true."
+    },
+    {
+      "name": "springleaf.smart.discovery.discovery.config.file.file",
+      "type": "java.lang.String",
+      "description": "[required] configuration file file-path，for example:classpath:discovery-rule.json."
+    },
+    {
+      "name": "springleaf.smart.discovery.config.nacos.server-addr",
+      "type": "java.lang.String",
+      "description": "[not required] configuration nacos server-addr,read spring.cloud.nacos.discovery.server-addr value if it is not configured."
+    },
+    {
+      "name": "springleaf.smart.discovery.discovery.config.nacos.dataId",
+      "type": "java.lang.String",
+      "description": "[not required] configuration nacos dataId,defualt value is DEFAULT_GROUP."
+    },
+    {
+      "name": "springleaf.smart.discovery.discovery.config.nacos.groupId",
+      "type": "java.lang.String",
+      "description": "[required] configuration nacos groupId."
+    },
+    {
+      "name": "springleaf.smart.discovery.discovery.config.env.value",
+      "type": "java.lang.String",
+      "description": "[required] Configure value directly from the Spring environment variable， for example: [{\"serviceId\": \"demo-a\",\"conditions\": \"host=*\" }]."
+    },
+    {
+      "name": "springleaf.smart.discovery.discovery.config.apollo.namespaceName",
+      "type": "java.lang.String",
+      "description": "[not required] configuration apollo namespaceName, default value is application."
+    },
+    {
+      "name": "springleaf.smart.discovery.discovery.config.apollo.ruleKey",
+      "type": "java.lang.String",
+      "description": "[required] configuration apollo ruleKey."
+    },
+    {
+      "name": "springleaf.smart.discovery.register.enabled",
+      "type": "java.lang.String",
+      "description": "[not required] enabled register function, default value is true."
+    },
+    {
+      "name": "springleaf.smart.discovery.register.config.env.value",
+      "type": "java.lang.String",
+      "description": "[required] Configure value directly from the Spring environment variable， for example: [{\"serviceId\": \"demo-a\",\"conditions\": \"host=*\" }]."
+    },
+    {
+      "name": "springleaf.smart.discovery.router.config.file.file",
+      "type": "java.lang.String",
+      "description": "[required] configuration file file-path，for example:classpath:discovery-rule.json."
+    },
+    {
+      "name": "springleaf.smart.discovery.router.enabled",
+      "type": "java.lang.String",
+      "description": "[not required] enabled router function, default value is true."
+    },
+    {
+      "name": "springleaf.smart.discovery.weight.enabled",
+      "type": "java.lang.String",
+      "description": "[not required] enabled weight function, default value is true."
+    },
+    {
+      "name": "springleaf.smart.discovery.weight.config.file.file",
+      "type": "java.lang.String",
+      "description": "[required] configuration file file-path，for example:classpath:discovery-rule.json."
+    },
+    {
+      "name": "springleaf.smart.discovery.register.config.nacos.server-addr",
+      "type": "java.lang.String",
+      "description": "[not required] configuration nacos server-addr,read spring.cloud.nacos.discovery.server-addr value if it is not configured."
+    },
+    {
+      "name": "springleaf.smart.discovery.register.config.nacos.dataId",
+      "type": "java.lang.String",
+      "description": "[not required] configuration nacos dataId,defualt value is DEFAULT_GROUP."
+    },
+    {
+      "name": "springleaf.smart.discovery.register.config.nacos.groupId",
+      "type": "java.lang.String",
+      "description": "[required] configuration nacos groupId."
+    },
+    {
+      "name": "springleaf.smart.discovery.register.config.apollo.namespaceName",
+      "type": "java.lang.String",
+      "description": "[not required] configuration apollo namespaceName, default value is application."
+    },
+    {
+      "name": "springleaf.smart.discovery.register.config.apollo.ruleKey",
+      "type": "java.lang.String",
+      "description": "[required] configuration apollo ruleKey."
+    },
+    {
+      "name": "springleaf.smart.discovery.register.config.file.file",
+      "type": "java.lang.String",
+      "description": "[required] configuration file file-path，for example:classpath:discovery-rule.json."
+    },
+    {
+      "name": "springleaf.smart.discovery.router.config.nacos.server-addr",
+      "type": "java.lang.String",
+      "description": "[not required] configuration nacos server-addr,read spring.cloud.nacos.discovery.server-addr value if it is not configured."
+    },
+    {
+      "name": "springleaf.smart.discovery.router.config.nacos.dataId",
+      "type": "java.lang.String",
+      "description": "[not required] configuration nacos dataId,defualt value is DEFAULT_GROUP."
+    },
+    {
+      "name": "springleaf.smart.discovery.router.config.nacos.groupId",
+      "type": "java.lang.String",
+      "description": "[required] configuration nacos groupId."
+    },
+    {
+      "name": "springleaf.smart.discovery.router.config.env.value",
+      "type": "java.lang.String",
+      "description": "[required] Configure value directly from the Spring environment variable， for example: [{\"serviceId\": \"demo-a\",\"conditions\": \"host=*\" }]."
+    },
+    {
+      "name": "springleaf.smart.discovery.router.config.apollo.namespaceName",
+      "type": "java.lang.String",
+      "description": "[not required] configuration apollo namespaceName, default value is application."
+    },
+    {
+      "name": "springleaf.smart.discovery.router.config.apollo.ruleKey",
+      "type": "java.lang.String",
+      "description": "[required] configuration apollo ruleKey."
+    },
+    {
+      "name": "springleaf.smart.discovery.weight.config.nacos.server-addr",
+      "type": "java.lang.String",
+      "description": "[not required] configuration nacos server-addr,read spring.cloud.nacos.discovery.server-addr value if it is not configured."
+    },
+    {
+      "name": "springleaf.smart.discovery.weight.config.nacos.dataId",
+      "type": "java.lang.String",
+      "description": "[not required] configuration nacos dataId,defualt value is DEFAULT_GROUP."
+    },
+    {
+      "name": "springleaf.smart.discovery.weight.config.nacos.groupId",
+      "type": "java.lang.String",
+      "description": "[required] configuration nacos groupId."
+    },
+    {
+      "name": "springleaf.smart.discovery.weight.config.env.value",
+      "type": "java.lang.String",
+      "description": "[required] Configure value directly from the Spring environment variable， for example: [{\"serviceId\": \"demo-a\",\"conditions\": \"host=*\" }]."
+    },
+    {
+      "name": "springleaf.smart.discovery.weight.config.apollo.namespaceName",
+      "type": "java.lang.String",
+      "description": "[not required] configuration apollo namespaceName, default value is application."
+    },
+    {
+      "name": "springleaf.smart.discovery.weight.config.apollo.ruleKey",
+      "type": "java.lang.String",
+      "description": "[required] configuration apollo ruleKey."
+    }
+  ] }

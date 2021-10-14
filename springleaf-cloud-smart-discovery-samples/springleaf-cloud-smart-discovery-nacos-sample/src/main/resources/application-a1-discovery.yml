@@ -1,0 +1,57 @@
+spring:
+  application:
+    name: demo-a
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        metadata:
+          group: groupA
+          version: 1.0
+          region: dev
+          tag:
+          weight: 20
+  main:
+    allow-bean-definition-overriding: true
+
+springleaf:
+  smart:
+    discovery:
+      discovery:
+#        enabled: true
+        config:
+          file:
+            file: classpath:discovery-rule-discovery.json
+#          nacos:
+  #          server-addr: localhost:8848
+#            dataId: discovery
+#            groupId: DEFAULT_GROUP
+  #        env:
+  #          value: '[{"serviceId": "demo-a","conditions": "host=* & application =^[0-9a-zA-Z-]*$","priority":1},{"conditions": "host!=10.0.* & application =^[0-9a-zA-Z-]*$"}]'
+  #        apollo:
+  #          namespaceName: application
+  #          ruleKey: discovery
+
+
+
+
+server:
+  port: 18080
+#  servlet:
+#    context-path: /demoa
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+ribbon:
+  ReadTimeout: 30000 #单位毫秒
+  ConnectTimeout: 30000 #单位毫秒
+
+
+logging:
+  level:
+    com:
+      springleaf: debug

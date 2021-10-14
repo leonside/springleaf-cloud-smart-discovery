@@ -1,0 +1,26 @@
+
+spring:
+  application:
+    name: demo-b
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    consul:
+      host: localhost
+      post: 8500
+      discovery:
+        preferIpAddress: true
+        tags: group=groupA,version=1.0,region=dev,weight=20
+
+server:
+  port: 28080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+ribbon:
+  ReadTimeout: 30000 #单位毫秒
+  ConnectTimeout: 30000 #单位毫秒

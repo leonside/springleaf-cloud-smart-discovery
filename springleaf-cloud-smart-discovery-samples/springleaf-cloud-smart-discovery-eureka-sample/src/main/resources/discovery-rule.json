@@ -1,0 +1,59 @@
+{
+  "discovery": [
+    {
+      "serviceId": "demo-a",
+      "force": true,
+      "priority": 0,
+      "conditions": "version = 1.0 => version = 1.* ",
+      "enabled": true
+    },
+    {
+      "serviceId": "demo-a",
+      "force": true,
+      "priority": 0,
+      "conditions": "tag='' => *",
+      "enabled": false,
+      "description": "Sorted by priority, global configuration has the lowest priority."
+    }
+  ],
+  "routers": [
+    {
+      "serviceId": "demo-a",
+      "priority": 0,
+      "path":"/demo-a/rule1",
+      "conditions": " => version=$version ",
+      "description": "Sorted by priority, global configuration has the lowest priority"
+    },
+    {
+      "serviceId": "demo-a",
+      "priority": 0,
+      "path":"/demo-a/rule2",
+      "conditions": "version = #{#request.getParameter('version')} => version = #{#request.getParameter('version')} "
+    }, {
+      "serviceId": "demo-a",
+      "priority": 0,
+      "path":"/demo-a/rule3",
+      "conditions": "=> version != 3.0 "
+    }
+  ],
+  "weights": [
+    {
+      "serviceId": "demo-b",
+      "type": "version",
+      "conditions": "application=demo-a",
+      "weightMap": {
+        "1.0": 1,
+        "2.0": 99
+      },
+      "priority": 0,
+      "description": "Only the first weight configuration takes effect"
+    }
+  ],
+  "registers":[
+    {
+      "serviceId": "demo-a",
+      "conditions": "host=* & application =^[0-9a-zA-Z-]*$",
+      "description": "Supports a single condition and returns Boolean"
+    }
+  ]
+}

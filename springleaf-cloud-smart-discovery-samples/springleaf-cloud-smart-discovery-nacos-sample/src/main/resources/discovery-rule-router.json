@@ -1,0 +1,20 @@
+[
+    {
+      "serviceId": "demo-a",
+      "priority": 0,
+      "path":"/demo-a/rule1",
+      "conditions": " => version=$version ",
+      "description": "Sorted by priority, global configuration has the lowest priority"
+    },
+    {
+      "serviceId": "demo-a",
+      "priority": 0,
+      "path":"/demo-a/rule2",
+      "conditions": "version = #{#request.getParameter('version')} => version = #{#request.getParameter('version')} "
+    }, {
+      "serviceId": "demo-a",
+      "priority": 0,
+      "path":"/demo-a/rule3",
+      "conditions": "=> version != 3.0 "
+    }
+  ]
