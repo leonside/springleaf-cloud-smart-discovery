@@ -254,7 +254,7 @@ logging:
 
 另外，得益于Spring的 spring-configuration-metadata 功能，针对框架相关的参数配置在idea开发环境下都可以通过诱导提示,包含参数说明、是否必填、示例等信息，如下：
 
-![](.\image\配置诱导提示.png)
+![](.\doc\image\配置诱导提示.png)
 
 ##### 步骤3.4：运行并验证结果
 
