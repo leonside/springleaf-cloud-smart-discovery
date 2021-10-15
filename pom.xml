@@ -12,7 +12,7 @@
     <modules>
         <module>springleaf-cloud-smart-discovery-dependencies</module>
         <module>springleaf-cloud-smart-discovery-registry</module>
-        <module>springleaf-cloud-smart-discovery-samples</module>
+<!--        <module>springleaf-cloud-smart-discovery-samples</module>-->
         <module>springleaf-cloud-smart-discovery-core</module>
         <module>springleaf-cloud-smart-discovery-config</module>
     </modules>
@@ -166,7 +166,20 @@
          </dependencies>
     </dependencyManagement>
 
-    <repositories>
+    <distributionManagement>
+        <repository>
+            <id>sonatype-releases</id>
+            <name>sonatype Release Repository</name>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+        <snapshotRepository>
+            <id>sonatype-snapshots</id>
+            <name>sonatype Snapshot Repository</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+   <!-- <repositories>
         <repository>
             <id>public-repository</id>
             <name>Team Nexus Release Repository</name>
@@ -186,8 +199,6 @@
             </snapshots>
         </repository>
     </repositories>
-
-
     <pluginRepositories>
         <pluginRepository>
             <id>nexus</id>
@@ -202,5 +213,5 @@
                 <updatePolicy>always</updatePolicy>
             </snapshots>
         </pluginRepository>
-    </pluginRepositories>
+    </pluginRepositories>-->
 </project>
