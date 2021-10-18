@@ -1,3 +1,4 @@
+[TOC]
 
 ## Smart Discovery简介
 ### 概述
