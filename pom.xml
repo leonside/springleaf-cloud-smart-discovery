@@ -8,6 +8,8 @@
     <artifactId>springleaf-cloud-smart-discovery-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0.RELEASE</version>
+    <name>${project.artifactId}</name>
+    <description>extension of springcloud discovery</description>
 
     <modules>
         <module>springleaf-cloud-smart-discovery-dependencies</module>
@@ -251,7 +253,7 @@
                         <version>1.6.8</version>
                         <extensions>true</extensions>
                         <configuration>
-                            <serverId>oss-release</serverId>
+                            <serverId>sonatype-releases</serverId>
                             <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
