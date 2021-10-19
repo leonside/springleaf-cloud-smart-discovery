@@ -27,6 +27,7 @@
         <dependency>
             <groupId>io.github.leonside</groupId>
             <artifactId>springleaf-cloud-smart-discovery-nacos</artifactId>
+            <!--<version>1.0.RELEASE</version>-->
         </dependency>
 
         <dependency>
