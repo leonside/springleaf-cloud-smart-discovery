@@ -55,7 +55,7 @@
 
  ```
 <dependency>
-   <groupId>com.springleaf</groupId>
+   <groupId>io.github.leonside</groupId>
    <artifactId>springleaf-cloud-smart-discovery-nacos</artifactId>
 </dependency>
  ```
@@ -148,7 +148,7 @@ spring:
 
  ```
 <dependency>
-   <groupId>com.springleaf</groupId>
+   <groupId>io.github.leonside</groupId>
    <artifactId>springleaf-cloud-smart-discovery-nacos</artifactId>
 </dependency>
  ```
