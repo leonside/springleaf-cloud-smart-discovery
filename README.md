@@ -59,7 +59,7 @@
    <artifactId>springleaf-cloud-smart-discovery-nacos</artifactId>
 </dependency>
  ```
-注:目前RELEASE分支下的版本均已发布至中央仓库（例如：1.0.RELEASE）
+注:目前RELEASE分支下的版本均已发布至中央仓库（例如：1.0.0）
 
 
 ##### 步骤2.3：SpringCloud简单示例编写
