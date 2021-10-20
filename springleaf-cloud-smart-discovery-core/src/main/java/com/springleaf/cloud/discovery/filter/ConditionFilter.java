@@ -15,7 +15,7 @@ import java.util.Optional;
  *
  * @author leon
  */
-public interface ConditionFilter extends Filter, Configurable{
+public interface ConditionFilter extends Filter{
 
     /**
      * filters services

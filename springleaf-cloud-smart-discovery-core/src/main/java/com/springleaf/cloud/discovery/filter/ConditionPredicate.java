@@ -1,6 +1,7 @@
 package com.springleaf.cloud.discovery.filter;
 
 import com.netflix.loadbalancer.Server;
+import com.springleaf.cloud.discovery.filter.register.GenericRegisterConditionPredicate;
 
 /**
  *
@@ -8,12 +9,12 @@ import com.netflix.loadbalancer.Server;
  *
  * It is applied when a service is registered or routed
  *
- * see{@link com.springleaf.cloud.discovery.filter.register.RegisterConditionPredicate}
+ * see{@link GenericRegisterConditionPredicate}
  * see{@link com.springleaf.cloud.discovery.filter.router.DynamicRouterConditionPredicate}
  *
  * @author leon
  */
-public interface ConditionPredicate extends Filter, Configurable {
+public interface ConditionPredicate extends Filter {
 
     /**
      * server predicate

@@ -8,6 +8,7 @@ import com.springleaf.cloud.discovery.config.model.BaseRule;
 import com.springleaf.cloud.discovery.config.model.RouterRule;
 import com.springleaf.cloud.discovery.filter.ConditionPredicate;
 import com.springleaf.cloud.discovery.filter.FilterContext;
+import com.springleaf.cloud.discovery.filter.RouterConditionPredicate;
 import com.springleaf.cloud.discovery.utils.URLMatcher;
 import com.netflix.loadbalancer.Server;
 import org.slf4j.Logger;
@@ -26,7 +27,7 @@ import java.util.List;
  * @author leon
  * @date 2021/9/21 16:10
  */
-public class DynamicRouterConditionPredicate implements ConditionPredicate {
+public class DynamicRouterConditionPredicate implements RouterConditionPredicate {
 
     public static final Logger logger = LoggerFactory.getLogger(DynamicRouterConditionPredicate.class);
     @Autowired

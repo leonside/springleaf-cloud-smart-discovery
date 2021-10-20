@@ -7,6 +7,7 @@ import com.springleaf.cloud.discovery.condition.IConditionFactory;
 import com.springleaf.cloud.discovery.condition.IRouter;
 import com.springleaf.cloud.discovery.config.model.BaseRule;
 import com.springleaf.cloud.discovery.config.model.RouterRule;
+import com.springleaf.cloud.discovery.filter.DiscoveryConditionFilter;
 import com.springleaf.cloud.discovery.filter.FilterContext;
 import com.springleaf.cloud.discovery.filter.ConditionFilter;
 import com.netflix.loadbalancer.Server;
@@ -24,7 +25,7 @@ import com.google.common.collect.Lists;
  * @author leon
  * @date 2021/9/17 15:22
  */
-public class GroupIsolationServerListConditionFilter implements ConditionFilter {
+public class GroupIsolationServerListConditionFilter implements DiscoveryConditionFilter {
 
     public static final Logger logger = LoggerFactory.getLogger(GroupIsolationServerListConditionFilter.class);
 
@@ -63,11 +64,6 @@ public class GroupIsolationServerListConditionFilter implements ConditionFilter 
         RouterRule routerRule = RouterRule.of(filterableRegistration.getServiceId(), conditions);
 
         return Lists.newArrayList(routerRule);
-    }
-
-    @Override
-    public RuleType support() {
-        return RuleType.DISCOVERY;
     }
 
 }
