@@ -2,13 +2,14 @@ package com.springleaf.cloud.discovery.condition;
 
 import com.springleaf.cloud.discovery.base.FilterableRegistration;
 import com.netflix.loadbalancer.Server;
+import com.springleaf.cloud.discovery.filter.register.GenericRegisterConditionPredicate;
 
 /**
  *
  * Conditional matching rules, such as for service registration scenarios
  *  for example:host=192.168.*
  *
- * Use in the service registry predicate,see {@link com.springleaf.cloud.discovery.filter.register.RegisterConditionPredicate}
+ * Use in the service registry predicate,see {@link GenericRegisterConditionPredicate}
  *
  * @author leon
  */

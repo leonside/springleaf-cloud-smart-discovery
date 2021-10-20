@@ -7,6 +7,7 @@ import com.springleaf.cloud.discovery.condition.IRouter;
 import com.springleaf.cloud.discovery.config.model.BaseRule;
 import com.springleaf.cloud.discovery.config.model.RouterRule;
 import com.springleaf.cloud.discovery.filter.ConditionFilter;
+import com.springleaf.cloud.discovery.filter.DiscoveryConditionFilter;
 import com.springleaf.cloud.discovery.filter.FilterContext;
 import com.netflix.loadbalancer.Server;
 import org.slf4j.Logger;
@@ -25,7 +26,7 @@ import java.util.Optional;
  * @date 2021/9/16 16:00
  */
 @Order
-public class LoadBalanceServerListConditionFilter implements ConditionFilter {
+public class LoadBalanceServerListConditionFilter implements DiscoveryConditionFilter {
 
     private static final Logger logger = LoggerFactory.getLogger(LoadBalanceServerListConditionFilter.class);
 
@@ -55,8 +56,4 @@ public class LoadBalanceServerListConditionFilter implements ConditionFilter {
         return Optional.of(filterRouters);
     }
 
-    @Override
-    public RuleType support() {
-        return RuleType.DISCOVERY;
-    }
 }

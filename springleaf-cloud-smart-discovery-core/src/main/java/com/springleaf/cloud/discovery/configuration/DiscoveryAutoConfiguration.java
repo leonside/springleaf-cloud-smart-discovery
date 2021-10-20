@@ -16,20 +16,18 @@ import com.springleaf.cloud.discovery.filter.FilterChain;
 import com.springleaf.cloud.discovery.filter.FilterChainDelegate;
 import com.springleaf.cloud.discovery.filter.FilterContext;
 import com.springleaf.cloud.discovery.filter.WeightLoadBalance;
-import com.springleaf.cloud.discovery.filter.register.RegisterConditionPredicate;
+import com.springleaf.cloud.discovery.filter.register.GenericRegisterConditionPredicate;
 import com.springleaf.cloud.discovery.filter.router.ConfigurableWeightLoadBalance;
 import com.springleaf.cloud.discovery.filter.router.DynamicRouterConditionPredicate;
 import com.springleaf.cloud.discovery.filter.serverlist.GroupIsolationServerListConditionFilter;
 import com.springleaf.cloud.discovery.filter.serverlist.LoadBalanceServerListConditionFilter;
 import com.springleaf.cloud.discovery.rest.DiscoveryController;
-import com.springleaf.cloud.discovery.config.parser.*;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -110,8 +108,8 @@ public class DiscoveryAutoConfiguration {
     @Bean
     @ConditionalOnMissingBean
     @ConditionalOnProperty(value = "springleaf.smart.discovery.register.enabled", havingValue = "true", matchIfMissing = true)
-    public RegisterConditionPredicate registerConditionPredicate(){
-        return new RegisterConditionPredicate();
+    public GenericRegisterConditionPredicate registerConditionPredicate(){
+        return new GenericRegisterConditionPredicate();
     }
 
     @Bean

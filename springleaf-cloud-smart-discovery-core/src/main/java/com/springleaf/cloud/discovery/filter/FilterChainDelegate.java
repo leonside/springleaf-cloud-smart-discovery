@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
  *
  * @author leon
  */
-public class FilterChainDelegate implements FilterChain, InitializingBean {
+public class FilterChainDelegate implements FilterChain {
 
     public static final Logger logger = LoggerFactory.getLogger(FilterChainDelegate.class);
 
@@ -26,16 +26,17 @@ public class FilterChainDelegate implements FilterChain, InitializingBean {
     private DiscoveryProperties filterableProperties;
     @Autowired
     private FilterContext filterContext;
+//    @Autowired
+//    private ObjectProvider<ConditionFilter> conditionFilters;
+//    @Autowired
+//    private ObjectProvider<ConditionPredicate> conditionPredicates;
+
     @Autowired
-    private ObjectProvider<ConditionFilter> conditionFilters;
+    private ObjectProvider<DiscoveryConditionFilter> orderedDiscoveryConditionFilters;
     @Autowired
-    private ObjectProvider<ConditionPredicate> conditionPredicates;
-
-    private List<ConditionFilter> orderedConditionFilters;
-
-    private List<ConditionPredicate> orderedRegisterPredicates;
-
-    private List<ConditionPredicate> orderedRouterPredicates;
+    private ObjectProvider<RegisterConditionPredicate> orderedRegisterPredicates;
+    @Autowired
+    private ObjectProvider<RouterConditionPredicate> orderedRouterPredicates;
 
     @Override
     public void onDiscoveryServerListFilter(List<Server> servers){
@@ -44,7 +45,11 @@ public class FilterChainDelegate implements FilterChain, InitializingBean {
             logger.debug("did not open routing When pulling the list of services, check the configuration of [springleaf.smart.discovery.router.enabled]");
             return;
         }
-        orderedConditionFilters.stream().forEach(filter->{
+        if(orderedDiscoveryConditionFilters == null){
+            return;
+        }
+
+        orderedDiscoveryConditionFilters.orderedStream().forEach(filter->{
             Optional<List<Server>> filterServer = filter.doFilter(filterContext, servers);
 
             if(filterServer.isPresent() && filterServer.get().size() != servers.size()){
@@ -63,8 +68,11 @@ public class FilterChainDelegate implements FilterChain, InitializingBean {
             logger.debug("did not open register check, check the configuration of [springleaf.smart.discovery.register.enabled]");
             return true;
         }
+        if(orderedRegisterPredicates == null){
+            return true;
+        }
 
-        return orderedRegisterPredicates.stream().allMatch(conditionPredicate -> conditionPredicate.apply(filterContext, server));
+        return orderedRegisterPredicates.orderedStream().allMatch(conditionPredicate -> conditionPredicate.apply(filterContext, server));
     }
 
     @Override
@@ -74,19 +82,22 @@ public class FilterChainDelegate implements FilterChain, InitializingBean {
             return true;
         }
 
-        return orderedRouterPredicates.stream().allMatch(conditionPredicate -> conditionPredicate.apply(filterContext, server));
-    }
-
-    @Override
-    public void afterPropertiesSet() {
-        if(conditionPredicates != null){
-            orderedRegisterPredicates = conditionPredicates.orderedStream().filter(it -> it.support() == RuleType.REGISTER).collect(Collectors.toList());
-            orderedRouterPredicates = conditionPredicates.orderedStream().filter(it -> it.support() == RuleType.ROUTER).collect(Collectors.toList());
+        if(orderedRouterPredicates == null){
+            return true;
         }
 
-        if(conditionFilters != null){
-            orderedConditionFilters = conditionFilters.orderedStream().filter(it->it.support() == RuleType.DISCOVERY).collect(Collectors.toList());
-        }
-
+        return orderedRouterPredicates.orderedStream().allMatch(conditionPredicate -> conditionPredicate.apply(filterContext, server));
     }
+
+//    @Override
+//    public void afterPropertiesSet() {
+//        if(conditionPredicates != null){
+//            orderedRegisterPredicates = conditionPredicates.orderedStream().filter(it -> it.support() == RuleType.REGISTER).collect(Collectors.toList());
+//            orderedRouterPredicates = conditionPredicates.orderedStream().filter(it -> it.support() == RuleType.ROUTER).collect(Collectors.toList());
+//        }
+//
+//        if(conditionFilters != null){
+//            orderedDiscoveryConditionFilters = conditionFilters.orderedStream().filter(it->it.support() == RuleType.DISCOVERY).collect(Collectors.toList());
+//        }
+//    }
 }
