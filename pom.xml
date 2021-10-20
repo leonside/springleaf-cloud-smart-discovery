@@ -7,14 +7,14 @@
     <groupId>io.github.leonside</groupId>
     <artifactId>springleaf-cloud-smart-discovery-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.RELEASE</version>
+    <version>1.0.0</version>
     <name>${project.artifactId}</name>
     <description>extension of springcloud discovery</description>
 
     <modules>
         <module>springleaf-cloud-smart-discovery-dependencies</module>
         <module>springleaf-cloud-smart-discovery-registry</module>
-<!--        <module>springleaf-cloud-smart-discovery-samples</module>-->
+        <module>springleaf-cloud-smart-discovery-samples</module>
         <module>springleaf-cloud-smart-discovery-core</module>
         <module>springleaf-cloud-smart-discovery-config</module>
     </modules>

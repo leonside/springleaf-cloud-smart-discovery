@@ -5,7 +5,7 @@
     <parent>
         <artifactId>springleaf-cloud-smart-discovery-samples</artifactId>
         <groupId>io.github.leonside</groupId>
-        <version>1.0.RELEASE</version>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -25,7 +25,7 @@
         <dependency>
             <groupId>io.github.leonside</groupId>
             <artifactId>springleaf-cloud-smart-discovery-consul</artifactId>
-            <!--<version>1.0.RELEASE</version>-->
+            <!--<version>1.0.0</version>-->
         </dependency>
     </dependencies>
 
