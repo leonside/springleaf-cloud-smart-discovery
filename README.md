@@ -275,4 +275,4 @@
 &emsp;&emsp;经过多次调用，发现始终都是调用版本号是v2的demo-b服务提供方(即端口号是28081)，由此可见，smart discovery帮助我们实现了服务消费方只能调用相同版本的服务提供方的业务场景。
 
 ## 写在最后
-&emsp;&emsp;Smart Discovery是在总结工作项目中使用SpringCloud遇到的诉求，利用工作之外的业余时间编写的，难免会有些不完善的地方欢迎指正。另外，Smart Discovery框架如果对你有帮助的话也请点个赞，这是对我最大的鼓励！
+&emsp;&emsp;Smart Discovery是在总结工作项目中使用SpringCloud遇到的诉求，利用工作之外的业余时间编写的，难免会有些不完善的地方欢迎指正（联系邮箱：408970922@qq.com）。另外，Smart Discovery框架如果对你有帮助的话也请点个赞，这是对我最大的鼓励！
