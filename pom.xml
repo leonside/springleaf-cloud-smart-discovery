@@ -14,7 +14,7 @@
     <modules>
         <module>springleaf-cloud-smart-discovery-dependencies</module>
         <module>springleaf-cloud-smart-discovery-registry</module>
-<!--        <module>springleaf-cloud-smart-discovery-samples</module>-->
+        <module>springleaf-cloud-smart-discovery-samples</module>
         <module>springleaf-cloud-smart-discovery-core</module>
         <module>springleaf-cloud-smart-discovery-config</module>
     </modules>
@@ -159,12 +159,6 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-                <version>${spring.cloud.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
                 <version>${spring.cloud.version}</version>
             </dependency>
 

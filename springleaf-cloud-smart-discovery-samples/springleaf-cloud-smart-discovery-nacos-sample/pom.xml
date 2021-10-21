@@ -14,10 +14,10 @@
 
     <dependencies>
 
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -42,4 +42,13 @@
         </dependency>
     </dependencies>
 
+    <!--<repositories>
+        <repository>
+            <id>AliRepo-aliyun</id>
+            <name>Team Nexus Release Repository</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases><enabled>true</enabled><updatePolicy>always</updatePolicy></releases>
+            <snapshots><enabled>true</enabled><updatePolicy>always</updatePolicy></snapshots>
+        </repository>
+    </repositories>-->
 </project>
