@@ -60,6 +60,29 @@
 </dependency>
  ```
 > 注:目前RELEASE分支下的版本均已发布至中央仓库（例如：1.0.1）
+> 另外，若框架中引用的SpringBoot、SpringCloud的版本和项目工程不一致，可由项目中自行定义版本号，如：
+>
+> ```java
+> <dependencyManagement>
+>         <dependencies>
+>             <dependency>
+>                 <groupId>org.springframework.cloud</groupId>
+>                 <artifactId>spring-cloud-dependencies</artifactId>
+>                 <version>2020.0.2</version>
+>                 <type>pom</type>
+>                 <scope>import</scope>
+>             </dependency>
+> 
+>             <dependency>
+>                 <groupId>org.springframework.boot</groupId>
+>                 <artifactId>spring-boot-dependencies</artifactId>
+>                 <version>2.5.6</version>
+>                 <type>pom</type>
+>                 <scope>import</scope>
+>             </dependency>
+>       </dependencies>
+> </dependencyManagement>
+> ```
 
 ##### 步骤2.2：SpringCloud简单示例编写
 
@@ -81,7 +104,6 @@
   }
   ```
   
-
 - 编写SpringBoot  Main函数
 
   此处只需添加@EnableSmartDiscoveryClient注解，其他只需参照SpringCloud的示例开发即可。
@@ -108,7 +130,7 @@
 
 - 编写application-b1.yml配置文件
 
-  同样，此处配置只需按照SpringCloud说明正常开放即可。
+  同样，此处配置只需按照SpringCloud说明正常开发即可。
 
   ```yaml
   server:
@@ -272,7 +294,7 @@
 
 同时查看浏览器返回的被调用服务提供方的IP、端口信息，查看具体是哪个提供方被调用。
 
-&emsp;&emsp;经过多次调用，发现始终都是调用版本号是v2的demo-b服务提供方(即端口号是28081)，由此可见，smart discovery帮助我们实现了服务消费方只能调用相同版本的服务提供方的业务场景。
+&emsp;&emsp;经过多次调用，发现始终都是调用版本号是v1的demo-b服务提供方(即端口号是28080)，由此可见，smart discovery帮助我们实现了服务消费方只能调用相同版本的服务提供方的业务场景。
 
 ## 写在最后
 &emsp;&emsp;Smart Discovery是在总结工作项目中使用SpringCloud遇到的诉求，利用工作之外的业余时间编写的，难免会有些不完善的地方欢迎指正（联系邮箱：408970922@qq.com）。另外，Smart Discovery框架如果对你有帮助的话也请点个赞，这是对我最大的鼓励！
