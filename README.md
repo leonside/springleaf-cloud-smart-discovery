@@ -23,7 +23,7 @@
 - 扩展性：框架提供简单易用、完善的扩展机制，开发者可通过扩展接口来快速订制业务逻辑，如自定义条件规则实现、扩展服务注册过滤器、扩展服务路由过滤器等。
 - 无代码入侵：开发者只需引入此框架，并做少量规则配置即可享受此框架带来的功能，无代码入侵，零代码。
 
-![](./doc/image/整体架构图.png)
+![](http://r938o17k5.hn-bkt.clouddn.com/discovery/%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84%E5%9B%BE.png)
 
 
 
@@ -282,7 +282,7 @@
 
   &emsp;&emsp;另外，得益于Spring的 spring-configuration-metadata 功能，针对框架相关的参数配置在idea开发环境下都可以通过诱导提示,包含参数说明、是否必填、示例等信息，如下：
 
-![](.\doc\image\配置诱导提示.png)
+![](http://r938o17k5.hn-bkt.clouddn.com/discovery/%E9%85%8D%E7%BD%AE%E8%AF%B1%E5%AF%BC%E6%8F%90%E7%A4%BA.png)
 
 ##### 步骤3.4：运行并验证结果
 
