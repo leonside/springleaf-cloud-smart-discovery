@@ -23,7 +23,7 @@
 - 扩展性：框架提供简单易用、完善的扩展机制，开发者可通过扩展接口来快速订制业务逻辑，如自定义条件规则实现、扩展服务注册过滤器、扩展服务路由过滤器等。
 - 无代码入侵：开发者只需引入此框架，并做少量规则配置即可享受此框架带来的功能，无代码入侵，零代码。
 
-![](http://r938o17k5.hn-bkt.clouddn.com/discovery/%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84%E5%9B%BE.png)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/543ef022a44a49e4946f3f0254e5fd3b~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
 
 
 
