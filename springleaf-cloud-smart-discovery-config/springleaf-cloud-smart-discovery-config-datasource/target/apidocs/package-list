@@ -1,0 +1,9 @@
+com.springleaf.cloud.discovery.config.datasource
+com.springleaf.cloud.discovery.config.datasource.config
+com.springleaf.cloud.discovery.config.datasource.configuration
+com.springleaf.cloud.discovery.config.datasource.converter
+com.springleaf.cloud.discovery.config.datasource.datasource
+com.springleaf.cloud.discovery.config.datasource.exception
+com.springleaf.cloud.discovery.config.datasource.factorybean
+com.springleaf.cloud.discovery.config.datasource.property
+com.springleaf.cloud.discovery.config.datasource.utils
